@@ -6,8 +6,49 @@ This application is developed using the **ServiceNow SDK**, **VS Code**, and **C
 
 ## Prerequisites
 
-Ensure the following tools are installed on your system:
 * **[Node.js](https://nodejs.org/en/download)**: Version v20.x.x or higher is required.
 * **ServiceNow SDK**: Can be installed via `npm install -g @servicenow/sdk`.
 * **Claude Code**: Requires a Claude Pro, Max, or Team subscription. When installed locally, it can be installed via `npm install -g @anthropic-ai/claude-code`. 
+* **ServiceNow PDI (Personal Developer Instance)**: Can be ordered for free on [https://developer.servicenow.com/](https://developer.servicenow.com/).
+
+## Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/youraccount/your-project-name.git
+cd your-project-name
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Authentication
+To connect the project to your ServiceNow Personal Developer Instance (PDI). The PDI example https://**dev123456**.service-now.com/, and it must be active (ensure you are logged in to the developer portal):
+```bash
+now-sdk auth --add dev123456 --type oauth
+```
+Follow the prompts in your browser to complete the OAuth authentication process. Copy the code provided in the browser. 
+
+Please note: When pasting the code into the terminal, the characters will not be visible. Paste it once and press Enter. 
+
+### 4. Development with Claude Code
+To initialize the AI assistant:
+```bash
+claude
+```
+
+## Deployment
+
+To deploy your local code changes to the connected ServiceNow instance, execute the following command:
+```bash
+now-sdk deploy
+```
+
+## Project Structure
+* **src/fluent/**: Contains metadata and server-side logic defined in TypeScript.
+* **src/client/**: Contains React components and Fluent UI assets for the user interface.
+* **now.config.json**: Configuration settings for the ServiceNow instance connection.
+
 
