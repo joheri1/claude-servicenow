@@ -7,8 +7,25 @@ This application is developed using the **ServiceNow SDK**, **VS Code**, and **C
 ## Prerequisites
 
 * **[Node.js](https://nodejs.org/en/download)**: Version v20.x.x or higher is required.
-* **ServiceNow SDK**: Can be installed via `npm install -g @servicenow/sdk`.
-* **Claude Code**: Requires a Claude Pro, Max, or Team subscription. When installed locally, it can be installed via `npm install -g @anthropic-ai/claude-code`. 
+
+* **ServiceNow SDK**: Install the SDK globally so the `now-sdk` CLI is available from any directory. 
+
+Can be installed via: 
+```bash
+npm install -g @servicenow/sdk
+```
+
+Verify version (expected output: 4.4.0 or later): 
+```bash
+now-sdk --version
+```
+
+* **Claude Code**: Requires a Claude Pro, Max, or Team subscription. When installed locally, it can be installed via: 
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
 * **ServiceNow PDI (Personal Developer Instance)**: Can be ordered for free on [https://developer.servicenow.com/](https://developer.servicenow.com/).
 
 ## Setup Instructions
@@ -24,6 +41,11 @@ cd your-project-name
 npm install
 ```
 
+To check version: 
+```bash
+npm --version
+```
+
 ### 3. Authentication
 To connect the project to your ServiceNow Personal Developer Instance (PDI). The PDI example https://**dev123456**.service-now.com/, and it must be active (ensure you are logged in to the developer portal):
 ```bash
@@ -33,7 +55,18 @@ Follow the prompts in your browser to complete the OAuth authentication process.
 
 Please note: When pasting the code into the terminal, the characters will not be visible. Paste it once and press Enter. 
 
-### 4. Development with Claude Code
+### 4. Claude Code "sndev" Skill Setup 
+A "skill" is a knowledge file that teaches Claude Code (AI) about the ServiceNow SDK and Fluent API. Follow these steps to install it:
+
+1. Create the skills directory: 
+```bash
+mkdir -p ~/.claude/skills/sndev
+```
+2. Download and copy the skill file: 
+```bash
+
+
+### 5. Development with Claude Code
 To initialize the AI assistant:
 ```bash
 claude
