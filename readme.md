@@ -1,4 +1,4 @@
-# ServiceNow SDK Project 
+# [DRAFT] ServiceNow SDK Project 
 
 This project is a test to see how I can develop for **ServiceNow** using **VS Code** instead of working directly in the **ServiceNow** web interface. The main goal is to try out **Claude Code** as an AI partner to see how much it can help me write and build applications faster.
 
