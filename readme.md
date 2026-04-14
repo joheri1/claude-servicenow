@@ -76,6 +76,9 @@ To initialize the AI assistant:
 claude
 ```
 
+### 6. Test the skill and Claude Code
+Type: "What ServiceNow SDK commands do you know?" to see if it lists the correct commands e.g. `n`ow-sdk build, `now-sdk deploy` and/or `now-sdk auth`
+
 ## Deployment
 
 To deploy your local code changes to the connected ServiceNow instance, execute the following command:
