@@ -62,9 +62,13 @@ A "skill" is a knowledge file that teaches Claude Code (AI) about the ServiceNow
 ```bash
 mkdir -p ~/.claude/skills/sndev
 ```
-2. Download and copy the skill file: 
+2. Create a skill file: 
 ```bash
+touch ~/.claude/skills/sndev/SKILL.md
+```
+I've used the following skill as template for this project:
 
+[Tutorial instructions and skills/SKILL.md](https://github.com/yvain13/Market_research_app/blob/main/Tutorial%20instructions%20and%20skills/SKILL.md)
 
 ### 5. Development with Claude Code
 To initialize the AI assistant:
